@@ -7,6 +7,12 @@ namespace MetricsManager
 {
     public class ValuesHolder
     {
-        public List<string> Values { get; set; }
+        private List<string> values;
+        public List<string> Values { get => values; set => values = value; }
+
+        public ValuesHolder()
+        {
+            values = new List<string>();
+        }
     }
 }

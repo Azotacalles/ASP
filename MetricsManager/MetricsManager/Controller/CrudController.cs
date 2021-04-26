@@ -47,5 +47,10 @@ namespace MetricsManager.Controller
             holder.Values = holder.Values.Where(w => w != stringsToDelete).ToList();
             return Ok();
         }
+
+        public string Hello()
+        {
+            return "Hello ASP.NET";
+        }
     }
 }
