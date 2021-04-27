@@ -1,13 +1,17 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace MetricsManager
 {
     public class WeatherForecast
     {
-        public DataType Data { get; set; }
-        public int TemperatureC { get; set; }
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-        public string Summary { get; set; }
+        public DateTime Date { get; set; }
+        public int Temperature { get; set; }
+
+        public WeatherForecast(DateTime date, int temperature)
+        {
+            Date = date;
+            Temperature = temperature;
+        }
     }
 }
