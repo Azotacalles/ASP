@@ -9,6 +9,6 @@ namespace MetricsManager
     {
         private List<WeatherForecast> list = new List<WeatherForecast>();
 
-        public List<WeatherForecast> List { get => list; set => list = value; }
+        public List<WeatherForecast> List { get => list; }
     }
 }
