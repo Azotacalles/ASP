@@ -24,6 +24,9 @@ namespace MetricsManager
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddControllers();
+            services.AddSingleton<ValuesHolder>();
+            services.AddSingleton<WeatherList>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +52,10 @@ namespace MetricsManager
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                //endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=weatherforecast}");
             });
         }
     }
