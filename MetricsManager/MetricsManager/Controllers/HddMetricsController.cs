@@ -11,5 +11,10 @@ namespace MetricsManager.Controller
     [ApiController]
     public class HddMetricsController : ControllerBase
     {
+        [HttpGet("api/metrics/hdd/left ")]
+        public IActionResult GetMetricsFromHddLeft()
+        {
+            return Ok();
+        }
     }
 }

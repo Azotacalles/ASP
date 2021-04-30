@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 
 namespace MetricsManager.Controller
 {
-    [Route("api/metrics/network")]
+    [Route("api/metrics/ram")]
     [ApiController]
-    public class NetworkMetricsController : ControllerBase
+    public class RamMetricsController : ControllerBase
     {
+        [HttpGet("api/metrics/ram/available")]
+        public IActionResult GetMetricsFromRamAvailable()
+        {
+            return Ok();
+        }
     }
 }
